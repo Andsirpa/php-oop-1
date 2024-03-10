@@ -6,8 +6,12 @@ class Production
     public $language;
     public $rating;
 
-    public function __construct($title, $language, $rating)
-    {
+    public function __construct(
+        // specifico il tipo di parametri
+        string $title,
+        string $language,
+        int $rating
+    ) {
         $this->title = $title;
         $this->language = $language;
         $this->rating = $rating;
@@ -29,3 +33,4 @@ class Production
         return $this->title;
     }
 }
+
