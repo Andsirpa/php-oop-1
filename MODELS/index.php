@@ -37,8 +37,43 @@ class Production
 // creo due produzioni
 // produzione 1
 $film = new Production('Film', 'en', 7);
-var_dump($film);
+
 
 // produzione 2
 $serie_tv = new Production('Serie TV', 'en', 7);
-var_dump($serie_tv);
+
+
+$productions = [
+    $film,
+    $serie_tv
+];
+var_dump($productions);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <?php foreach ($productions as $production): ?>
+        <ul>
+            <li>Title:
+                <?= $production->title ?>
+            </li>
+            <li>Language:
+                <?= $production->language ?>
+            </li>
+            <li>Rating:
+                <?= $production->rating ?>
+            </li>
+        </ul>
+    <?php endforeach; ?>
+</body>
+
+</html>
