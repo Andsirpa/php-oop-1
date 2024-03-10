@@ -34,3 +34,11 @@ class Production
     }
 }
 
+// creo due produzioni
+// produzione 1
+$film = new Production('Film', 'en', 7);
+var_dump($film);
+
+// produzione 2
+$serie_tv = new Production('Serie TV', 'en', 7);
+var_dump($serie_tv);
